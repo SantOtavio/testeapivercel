@@ -1,13 +1,28 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    res.send("Hello World! (using get)");
-}
-);
+router.get("/", async (req, res) => {
+    try {
+        res.json({
+            status: 200,
+            message: "Você utilizou get",
+        });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send("Server error");
+    }
+});
 
-router.post("/", (req, res) => {
-    res.send("Hello World! (using post)");
+router.post("/", async (req, res) => {
+    try {
+        res.json({
+            status: 200,
+            message: "Você utilizou post",
+        });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send("Server error");
+    }
 }
 );
 

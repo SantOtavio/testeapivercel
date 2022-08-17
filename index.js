@@ -7,7 +7,7 @@ const app = express();
 const user = require("./api/user");
 
 app.use(express.json());
-app.use("./api/user", user.router);
+app.use("./api/user", user);
 
 
 app.get("/", (req, res) => {
