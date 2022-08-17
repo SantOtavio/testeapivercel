@@ -4,14 +4,10 @@ const express = require("express");
 // Initialize Express
 const app = express();
 
-// Create GET request
-app.get("/", (req, res) => {
-  res.send("Express on Vercel using get");
-});
+const user = require("./user/user");
 
-app.post("/", (req, res) => {
-    res.send("Express on Vercel using post");
-} );
+app.use(express.json());
+app.use("./user/user", user.router);
 
 // Initialize server
 app.listen(3200, () => {
