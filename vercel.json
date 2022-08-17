@@ -12,8 +12,8 @@
         "dest": "index.js"
       },
       {
-        "src": "/api/user",
-        "dest": "./api/user.js"
+        "src": "/user",
+        "dest": "./user/user.js"
       }
     ]
   }
