@@ -4,14 +4,19 @@ const express = require("express");
 // Initialize Express
 const app = express();
 
-const user = require("./user/user");
+const user = require("./api/user");
 
 app.use(express.json());
-app.use("./user/user", user.router);
+app.use("./api/user", user.router);
 
+
+app.get("/", (req, res) => {
+    res.send("Hello World");
+}
+);
 // Initialize server
 app.listen(3200, () => {
-  console.log("Running on port 5000.");
+    console.log("Running on port 5000.");
 });
 
 module.exports = app;
