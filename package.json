@@ -1,25 +1,17 @@
 {
-  "dependencies": {
-    "express": "^4.18.1"
-  },
-  "name": "testeapivercel",
+  "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SantOtavio/testeapivercel.git"
-  },
+  "main": "server.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SantOtavio/testeapivercel/issues"
+  "description": "",
+  "scripts": {
+    "start": "nodemon index.js"
   },
-  "homepage": "https://github.com/SantOtavio/testeapivercel#readme",
-  "description": ""
+  "dependencies": {
+    "express": "^4.18.1",
+    "firebase": "^9.9.2",
+    "nodemon": "^2.0.19"
+  }
 }

@@ -1,10 +1,13 @@
 const express = require("express");
+const port = 8080;
+
+const router = require("./router");
+
 const app = express();
-const user = require("./api/user");
+app.use(express.json());
 
-app.use(express.json({ extended: false }));
+app.use("/api", router);
 
-app.use("/api/user", user);
-
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
+app.listen(port, () => {
+    console.log(`App listening on http://localhost:${port}`);
+})
